@@ -88,6 +88,28 @@ public:
 		return c;
 	}
 
+	operator char* () const
+	{
+		if (str == nullptr)
+			return (char*)"Empty";
+		else
+		{
+			return str;
+		}
+	}
+
+	operator int()
+	{
+		if (str == nullptr)
+		{
+			return 0;
+		}
+		else
+		{
+			return atoi(str);
+		}
+	}
+
 	friend ostream& operator<<(ostream& s, MyStr a)
 	{
 		if (a.len == 0)
